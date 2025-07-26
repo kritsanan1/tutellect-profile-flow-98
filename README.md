@@ -1,5 +1,7 @@
 # Professional Profile Management Platform
 
+[![screencapture-preview-tutellect-profile-flow-98-lovable-app-profile-2025-07-26-23-52-46.png](https://i.postimg.cc/13QMQ2P8/screencapture-preview-tutellect-profile-flow-98-lovable-app-profile-2025-07-26-23-52-46.png)](https://postimg.cc/N5dR8NKt)
+
 A modern, responsive web application for creating and managing professional profiles with comprehensive sections for experience, education, skills, and more.
 
 ## 🚀 Features
