@@ -1,73 +1,234 @@
-# Welcome to your Lovable project
+# Professional Profile Management Platform
 
-## Project info
+A modern, responsive web application for creating and managing professional profiles with comprehensive sections for experience, education, skills, and more.
 
-**URL**: https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce
+## 🚀 Features
 
-## How can I edit this code?
+- **Profile Management:** Complete profile creation with avatar, contact info, and professional summary
+- **Experience Tracking:** Work experience, education, certifications, and projects
+- **Skills Showcase:** Technical skills, languages, interests, and achievements
+- **Custom Sections:** Flexible custom sections with icons, dates, and descriptions
+- **Account Management:** User preferences, security settings, and profile verification
+- **Responsive Design:** Mobile-first design with dark/light theme support
+- **Modern UI:** Built with shadcn/ui components and Tailwind CSS
 
-There are several ways of editing your application.
+## 🛠 Tech Stack
 
-**Use Lovable**
+- **Frontend:** React 18, TypeScript, Vite
+- **Styling:** Tailwind CSS with custom design system
+- **UI Components:** shadcn/ui, Radix UI primitives
+- **Forms:** React Hook Form with Zod validation
+- **Routing:** React Router v6
+- **State Management:** React hooks and context
+- **Icons:** Lucide React
+- **Notifications:** Sonner toast library
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce) and start prompting.
+## 📋 Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Node.js:** v18.0.0 or higher
+- **Package Manager:** npm, yarn, pnpm, or bun
+- **Browser:** Modern browsers with ES2020 support
 
-**Use your preferred IDE**
+## 🔧 Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+1. **Clone the repository:**
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
 ```
 
-**Edit a file directly in GitHub**
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Start development server:**
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-**Use GitHub Codespaces**
+4. **Open in browser:**
+Navigate to `http://localhost:8080`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗 Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── components/           # React components
+│   ├── ui/              # shadcn/ui components
+│   ├── layout/          # Layout components (Navbar, Footer)
+│   ├── landing/         # Landing page sections
+│   ├── dashboard/       # Dashboard functionality
+│   ├── account/         # Account management
+│   ├── profile/         # Profile management
+│   └── common/          # Shared components
+├── pages/               # Page components
+├── hooks/               # Custom React hooks
+├── lib/                 # Utility functions
+└── index.css           # Global styles and design tokens
+```
 
-This project is built with:
+## 🎨 Design System
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application uses a custom design system built on Tailwind CSS with semantic color tokens:
 
-## How can I deploy this project?
+- **Primary Colors:** Tutellect brand gradient (#0FF0B3 to #036ED9)
+- **Typography:** Inter (body), Montserrat (headings)
+- **Theme Support:** Automatic dark/light mode detection
+- **Responsive:** Mobile-first breakpoint system
 
-Simply open [Lovable](https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce) and click on Share -> Publish.
+## 📱 Available Routes
 
-## Can I connect a custom domain to my Lovable project?
+- `/` - Landing page
+- `/profile` - Profile management
+- `/account` - Account settings
+- `/dashboard` - User dashboard
+- `*` - 404 Not Found page
 
-Yes it is!
+## 🧪 Development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Code Style
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **ESLint:** Configured with React and TypeScript rules
+- **Prettier:** Automatic code formatting
+- **TypeScript:** Strict mode enabled
+- **Conventions:** Functional components with hooks
+
+### Git Workflow
+
+- **Branch Format:** `[type]/[ticket-number]-[description]`
+  - Examples: `feature/PRO-123-add-education-section`, `fix/BUG-456-mobile-nav`
+- **Commit Messages:** Conventional commits format
+- **Pull Requests:** Use provided template with testing checklist
+
+### Component Guidelines
+
+1. **File Organization:** Group related components in feature folders
+2. **Type Safety:** Define interfaces for all props and data structures
+3. **Reusability:** Create composable components with variant patterns
+4. **Accessibility:** Include ARIA labels and keyboard navigation
+5. **Performance:** Use React.memo for expensive components
+
+## 🚀 Build & Deployment
+
+### Development Build
+```bash
+npm run build
+npm run preview
+```
+
+### Production Deployment
+```bash
+npm run build
+# Deploy the 'dist' folder to your hosting provider
+```
+
+### Environment Variables
+
+Create a `.env.local` file based on `.env.example`:
+
+```env
+# App Configuration
+VITE_APP_TITLE="Professional Profile Platform"
+VITE_APP_DESCRIPTION="Create and manage your professional profile"
+
+# API Configuration (if applicable)
+# VITE_API_BASE_URL=https://api.yourapp.com
+# VITE_API_VERSION=v1
+
+# Analytics (if applicable)
+# VITE_ANALYTICS_ID=your-analytics-id
+```
+
+## 🔍 Testing
+
+```bash
+# Run tests
+npm run test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run E2E tests
+npm run test:e2e
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Port already in use:**
+```bash
+# Change port in vite.config.ts or kill process on port 8080
+lsof -ti:8080 | xargs kill -9
+```
+
+2. **Module resolution errors:**
+```bash
+# Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+3. **TypeScript errors:**
+```bash
+# Restart TypeScript server in VS Code
+Cmd/Ctrl + Shift + P -> "TypeScript: Restart TS Server"
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+### Pull Request Template
+
+- [ ] **Code Quality:** Follows project conventions and passes linting
+- [ ] **Testing:** Includes tests for new functionality
+- [ ] **Documentation:** Updates relevant documentation
+- [ ] **Screenshots:** Includes before/after screenshots for UI changes
+- [ ] **Breaking Changes:** Documents any breaking changes
+
+## 🚀 Lovable Development
+
+This project is built with [Lovable](https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce), enabling rapid development through AI assistance.
+
+### Editing Options
+
+**Use Lovable (Recommended)**
+- Visit the [Lovable Project](https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce)
+- Changes made via Lovable are automatically committed
+
+**Local Development**
+- Clone this repo and push changes for automatic sync with Lovable
+- All standard Git workflows are supported
+
+**Deploy with Lovable**
+- Open [Lovable](https://lovable.dev/projects/a144512f-d9cf-45ef-8b9f-c673e109d9ce)
+- Click Share → Publish for instant deployment
+- Connect custom domains via Project → Settings → Domains
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🆘 Support
+
+- **Documentation:** [Lovable Docs](https://docs.lovable.dev/)
+- **Custom Domain:** [Setup Guide](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Community:** [Lovable Discord](https://discord.gg/lovable)
